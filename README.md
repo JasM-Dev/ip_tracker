@@ -45,8 +45,6 @@ Users should be able to:
 - Frontend Mentor - [@jmcollins414](https://www.frontendmentor.io/profile/jmcollins414)
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
