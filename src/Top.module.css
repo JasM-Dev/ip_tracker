@@ -1,0 +1,36 @@
+.container {
+	background-image: url('/public/pattern-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 157px;
+
+	grid-column: 1/2;
+}
+.header {
+	padding: 26px 24px 0px 24px;
+}
+.title {
+	font-size: 26px;
+	line-height: 30px;
+	letter-spacing: -0.23px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.title {
+		font-size: 32px;
+		line-height: 30px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.header {
+		padding: 33px 0px 3px 0px;
+	}
+	.container {
+		padding-bottom: 127px;
+	}
+}

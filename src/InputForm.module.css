@@ -1,0 +1,42 @@
+.ip_form {
+	display: flex;
+	width: 100vw;
+	justify-content: center;	
+}
+.bttn_input_container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding-left: 24px;
+	padding-right: 24px;
+    max-width: 555px;
+}
+.ip_input {
+	display: block;
+	width: 100%;
+	outline: 0;
+	border: none;
+	padding: 18px 24px 19px 24px;
+	border-radius: 15px 0px 0px 15px;
+	box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2c2c2c;
+}
+.form_bttn {
+	display: block;
+	border: 0;
+	outline: 0;
+	height: 100%;
+	border-radius: 0px 15px 15px 0px;
+	padding: 18px 24px 19px 26px;
+    background-color: #000;
+    stroke: #fff;
+    stroke-width: 3px;
+}
+
+@media(min-width: 1400px){
+
+}

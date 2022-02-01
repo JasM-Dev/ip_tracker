@@ -1,0 +1,22 @@
+.map_container{
+    height: 100%;
+    grid-column: 1/2;
+}
+.map{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width :100%;
+    display: block;
+   
+}
+@media(min-width: 768px){
+	.info_list{
+	
+	}
+}
+@media(min-width: 1400px){
+	.info_list{
+	
+	}
+}
