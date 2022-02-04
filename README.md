@@ -19,13 +19,14 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - See their own IP Address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
+
 ### Screenshot
 
-![ip tracker app screenshot](./public/project-screenshot-small.png)
+![IP Tracker app screenshot](./public/project-screenshot-small.png)
 
 ### Links
 
-- Live Site URL: [https://ip-tracker-ten-ecru.vercel.app/](https://ip-tracker-ten-ecru.vercel.app/)
+- Live Site URL: [http://ip-tracker-ten-ecru.vercel.app/](http://ip-tracker-ten-ecru.vercel.app/)
 
 ## My process
 
