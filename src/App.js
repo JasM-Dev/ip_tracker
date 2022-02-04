@@ -3,7 +3,7 @@ import TopBar from './TopBar';
 import IpMap from './IpMap';
 
 import axios from 'axios';
-const api_key = process.env.REACT_APP_GEO_API_KEY;
+const API_KEY = process.env.REACT_APP_GEO_API_KEY;
 
 function App() {
 	const [error, setError] = useState({
@@ -19,25 +19,25 @@ function App() {
 		isp: '',
 	});
 
-	const url = `https://geo.ipify.org/api/v1?apiKey=${api_key}&ipAddress=${ipInfo.ip}`;
+	const url = `https://geo.ipify.org/api/v1?apiKey=${API_KEY}`;
 
 	const getIpInfo = useCallback(() => {
 		const regexExp =
 			/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
 
-		if (!regexExp.test(ipInfo.ip)) {
+		if ( ipInfo.ip !== '' && !regexExp.test(ipInfo.ip)) {
 			setError({
 				status: true,
 				message: 'Please enter a valid ip address',
 			});
 			return;
 		} else {
-			axios
-				.get(url)
+			axios.get(url + `&ipAddress=${ipInfo.ip}`)
 				.then(res => {
 					const { city, timezone, region, lat, lng } = res.data.location;
 					setIpInfo(prev => ({
 						...prev,
+						ip: res.data.ip,
 						location: `${city},${region}`,
 						timezone: timezone,
 						isp: res.data.isp,
@@ -52,7 +52,6 @@ function App() {
 	}, [ipInfo.ip, url]);
 
 	useEffect(() => {
-		if (ipInfo.ip === '') return;
 		getIpInfo();
 	}, [getIpInfo, ipInfo.ip]);
 
@@ -67,7 +66,6 @@ function App() {
 	}
 	return (
 		<div className='app_container'>
-		
 			<TopBar
 				handleSubmit={submitform}
 				handleChange={ipInput}
